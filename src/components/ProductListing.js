@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import ProductComponent from "./ProductComponent";
 
 const ProductListing = () => {
   const products = useSelector((state) => state)
@@ -7,7 +8,8 @@ const ProductListing = () => {
   return (
     <div className="menu_pdls">
       <div className="container_pdls">
-        <h2>Heey ProductListing</h2>
+        {/* <h2>Heey ProductListing</h2> */}
+        <ProductComponent />
       </div>
     </div>
   );
