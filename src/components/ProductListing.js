@@ -3,6 +3,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import ProductComponent from "./ProductComponent";
 import { useDispatch } from "react-redux";
+import { setProducts } from "../actions/productActions";
 
 const ProductListing = () => {
   const products = useSelector((state) => state);
@@ -14,7 +15,7 @@ const ProductListing = () => {
         console.log("Error", error);
       });
       // console.log(response.data);
-      dispatch(response.data)
+      dispatch(setProducts(response.data))
   };
   useEffect(() => {
     fetchProducts();
