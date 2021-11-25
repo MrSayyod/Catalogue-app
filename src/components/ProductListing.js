@@ -20,7 +20,7 @@ const ProductListing = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log(products);
+  console.log("Products: ", products);
   return (
     <div className="menu_pdls">
       <div className="container_pdls">
