@@ -2,11 +2,14 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedProduct, removeSelectedProduct } from "../actions/productActions";
+import {
+  selectedProduct,
+  removeSelectedProduct,
+} from "../actions/productActions";
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
-  const { title, image, price, category, description } = product
+  const { title, image, price, category, description } = product;
   const { productId } = useParams();
   const dispatch = useDispatch();
   console.log(product);
@@ -24,6 +27,9 @@ const ProductDetail = () => {
     if (productId && productId !== "") {
       fetchProductDetail();
     }
+    return () => {
+      dispatch(removeSelectedProduct());
+    };
   }, [productId]);
   return (
     <div className="container">
@@ -31,13 +37,13 @@ const ProductDetail = () => {
         <div>...Loading</div>
       ) : (
         <div className="placeholder segment">
-          <div className="two column center grid"> 
+          <div className="two column center grid">
             <div className="vertical divider">AND</div>
             <div className="middle aligned row">
-              <div className='column lp'>
+              <div className="column lp">
                 <img className="fluid image" src={image} />
               </div>
-              <div className='column rp'>
+              <div className="column rp">
                 <h1>{title}</h1>
                 <h2>
                   <a className="teal tag label">$ {price}</a>
@@ -59,7 +65,7 @@ const ProductDetail = () => {
 
     // <div className="menu_pddtl">
     //   <div className="container_pddtl">
-        
+
     //     {/* <h2>Heey ProductDetail</h2> */}
     //   </div>
     // </div>
