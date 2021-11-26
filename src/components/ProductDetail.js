@@ -5,20 +5,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectedProduct } from "../actions/productActions";
 
 const ProductDetail = () => {
-  const product = useSelector((state)=> state.product)
+  const product = useSelector((state) => state.product);
   const { productId } = useParams();
-  const dispatch = useDispatch()
-  console.log(productId);
+  const dispatch = useDispatch();
+  console.log(product);
 
-  const fetchProductDetail = async() => {
+  const fetchProductDetail = async () => {
     const response = await axios
       .get(`https://fakestoreapi.com/products/${productId}`)
       .catch((error) => {
         console.log("Error", error);
       });
 
-      dispatch(selectedProduct(response.data))
+    dispatch(selectedProduct(response.data));
   };
+  useEffect(() => {
+    if (productId && productId !== "") {
+      fetchProductDetail();
+    }
+  }, [productId]);
   return (
     <div className="menu_pddtl">
       <div className="container_pddtl">{/* <h2>Heey ProductDetail</h2> */}</div>
