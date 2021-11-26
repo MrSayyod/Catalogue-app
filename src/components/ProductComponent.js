@@ -8,6 +8,7 @@ const ProductComponent = () => {
     const { id, title, image, price, category } = product;
     return (
       <div className="menu_pdcmp" key={id}>
+        <Link to={`/product/${id}`}>
         <div className="container_pdcmp">
           <div className="card">
             <div className="image">
@@ -21,6 +22,7 @@ const ProductComponent = () => {
           </div>
           {/* <h2>Heey ProductComponent</h2> */}
         </div>
+        </Link>
       </div>
     );
   });
