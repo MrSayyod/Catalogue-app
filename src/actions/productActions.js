@@ -20,3 +20,10 @@ export const removeSelectedProduct = (product) => {
     payload: product,
   };
 };
+
+export const filterProduct = (product) => {
+  return {
+    type: ActionTypes.CHANGE_FILTER,
+    payload: product,
+  };
+};
