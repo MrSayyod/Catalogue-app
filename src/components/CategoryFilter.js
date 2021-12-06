@@ -20,3 +20,9 @@ const CategoryFilter = ({handleFilterChange, className}) => (
   </select>
 )
 
+CategoryFilter.PropTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired,
+}
+
+export {CategoryFilter, CATEGORIES}
