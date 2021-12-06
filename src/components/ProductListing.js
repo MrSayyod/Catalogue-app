@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import ProductComponent from "./ProductComponent";
 import { useDispatch } from "react-redux";
 import { setProducts } from "../actions/productActions";
+import { CategoryFilter } from "./CategoryFilter";
 
 const ProductListing = () => {
   const products = useSelector((state) => state);
