@@ -11,6 +11,7 @@ import { product } from "prelude-ls";
 
 const ProductListing = () => {
   const products = useSelector((state) => state);
+  const all = products.allProducts.products
   console.log(products)
   console.log(products.allProducts)
   console.log(products.allProducts.products)
@@ -45,30 +46,68 @@ const ProductListing = () => {
   const handleFilterChange = (e) => {
     dispatch(filterProduct(e.target.value))
   }
-  console.log(products);
+  console.log(products);  
   const productsDisplay = () => {
     if(products.filter === 'ALL') {
       return products.allProducts.products
     }
     return products.allProducts.products.filter((product) => product.category === products.filter)
   }
+ 
+  let content ;
+
+  if (products.filter === 'ALL') {
+     content = <ProductComponent />
+  } 
+  // else {
+  //   filteredContent = all.filter(
+  //     (category) => category.category === all.filter
+  //   );
+  //   content = filteredContent.map((category) => (
+  //     <ProductComponent key={category.id} category={category} />
+  //   ));
+  // }
+
+
+
   // console.log("Products: ", products);
   return (
     <div className="menu_pdls">
-      <div>
+      <div className="category_filter">
         <CategoryFilter handleFilterChange = {handleFilterChange} className="categoryDropdown"/>
       </div>
-      <section>
-        {/* {data} */}
-      </section>
       <div className="container_pdls">
-        {productsDisplay().map((product) => (
+        {/* {productsDisplay().map((product) => (
           <h3 key={product.id}>{product.title}</h3>
-        ))}
-        <ProductComponent />
+        ))} */}
+        {/* <ProductComponent /> */}
       </div>
+      <section>
+        {content}
+      </section>
     </div>
   );
 };
 
+// if filter==="all" {
+//   render ProductComponent
+// }
+// if filter === filtered catergory {
+//   render filtered items
+// }
+
+
 export default ProductListing;
+
+// if (filter === 'All') {
+//   content = recipeCategories.map((category) => (
+//     <Category key={category.idCategory} category={category} />
+//   ));
+// } else {
+//   filteredContent = recipeCategories.filter(
+//     (category) => category.strCategory === filter, shirt
+//   );
+//   content = filteredContent.map((category) => (
+//     <Category key={category.idCategory} category={category} />
+//   ));
+// }
