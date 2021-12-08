@@ -1,28 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { classDeclaration } from '@babel/types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const CATEGORIES = [
   "men's clothing",
   "jewelery",
   "electronics",
-  "women's clothing"
-]
+  "women's clothing",
+];
 
-const CategoryFilter = ({handleFilterChange, className}) => (
+const CategoryFilter = ({ handleFilterChange, className }) => (
   <select name="category" className={className} onChange={handleFilterChange}>
     <option value="ALL">CATEGORIES</option>
-    {CATEGORIES.map((item)=> (
+    {CATEGORIES.map((item) => (
       <option key={item} valu={item}>
         {item}
-        </option>
+      </option>
     ))}
   </select>
-)
+);
 
-CategoryFilter.PropTypes = {
+CategoryFilter.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
   className: PropTypes.string.isRequired,
-}
+};
 
-export {CategoryFilter, CATEGORIES}
+export { CategoryFilter, CATEGORIES };
