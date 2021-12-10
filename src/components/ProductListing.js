@@ -6,15 +6,13 @@ import { useDispatch } from "react-redux";
 import { setProducts } from "../actions/productActions";
 import { filterProduct } from "../actions/productActions";
 import { CategoryFilter } from "./CategoryFilter";
-import { log } from "async";
-import { product } from "prelude-ls";
 
 const ProductListing = () => {
   const products = useSelector((state) => state);
-  const all = products.allProducts.products
-  console.log(products)
-  console.log(products.allProducts)
-  console.log(products.allProducts.products)
+  const all = products.allProducts.products;
+  // console.log(products)
+  // console.log(products.allProducts)
+  // console.log(products.allProducts.products)
   // console.log(products.allProducts.products);
   // console.log(typeof(products.allProducts.products));
   // const arr = products.map(item=>item)
@@ -22,14 +20,14 @@ const ProductListing = () => {
   // console.log(typeof(arr));
   // console.log(typeof(products))
   // console.log(`1 ${products}`)
-  
-  const dispatch = useDispatch()
+
+  const dispatch = useDispatch();
 
   //const filteredProducts = filter === 'CATEGORIES' ? products.allProducts.products : //products.allProducts.products.filter((item) => item.category === filter)
   // const filteredProducts = products.allProducts.products.filter((item) => item.category === 'electronics')
   // const filteredProducts = filter === 'ALL' ? products : products.allProducts.products.filter((item) => item.category.includes(filter))
   // const data = filteredProducts.map((item)=> (
-    // <ProductComponent key={item.id} product={item} />
+  // <ProductComponent key={item.id} product={item} />
   // ))
   const fetchProducts = async () => {
     const response = await axios
@@ -37,44 +35,46 @@ const ProductListing = () => {
       .catch((error) => {
         console.log("Error", error);
       });
-      // console.log(response.data);
-      dispatch(setProducts(response.data))
+    // console.log(response.data);
+    dispatch(setProducts(response.data));
   };
   useEffect(() => {
     fetchProducts();
   }, []);
   const handleFilterChange = (e) => {
-    dispatch(filterProduct(e.target.value))
-  }
-  console.log(products);  
+    dispatch(filterProduct(e.target.value));
+  };
+  // console.log(products);
   const productsDisplay = () => {
-    if(products.filter === 'ALL') {
-      return products.allProducts.products
+    if (products.filter === "ALL") {
+      return products.allProducts.products;
     }
-    return products.allProducts.products.filter((product) => product.category === products.filter)
+    return products.allProducts.products.filter(
+      (product) => product.category === products.filter
+    );
+  };
+  //  20 = 4 = 4
+  let content;
+  let filteredContent;
+
+  if (products.filter === "ALL") {
+    content = <ProductComponent items={all} />;
+  } else {
+    filteredContent = all.filter(
+      (category) => category.category === products.filter
+    );
+    console.log(filteredContent);
+    content = <ProductComponent items={filteredContent} />;
   }
- 
-  let content ;
-
-  if (products.filter === 'ALL') {
-     content = <ProductComponent />
-  } 
-  // else {
-  //   filteredContent = all.filter(
-  //     (category) => category.category === all.filter
-  //   );
-  //   content = filteredContent.map((category) => (
-  //     <ProductComponent key={category.id} category={category} />
-  //   ));
-  // }
-
-
 
   // console.log("Products: ", products);
   return (
     <div className="menu_pdls">
       <div className="category_filter">
-        <CategoryFilter handleFilterChange = {handleFilterChange} className="categoryDropdown"/>
+        <CategoryFilter
+          handleFilterChange={handleFilterChange}
+          className="categoryDropdown"
+        />
       </div>
       <div className="container_pdls">
         {/* {productsDisplay().map((product) => (
@@ -82,9 +82,7 @@ const ProductListing = () => {
         ))} */}
         {/* <ProductComponent /> */}
       </div>
-      <section>
-        {content}
-      </section>
+      <section>{content}</section>
     </div>
   );
 };
@@ -95,7 +93,6 @@ const ProductListing = () => {
 // if filter === filtered catergory {
 //   render filtered items
 // }
-
 
 export default ProductListing;
 
