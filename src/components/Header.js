@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="menu">
       <div className="container">
-        <h2>Heey header</h2>
+        <h2 data-testid='header-text'>Heey header</h2>
       </div>
     </div>
   );

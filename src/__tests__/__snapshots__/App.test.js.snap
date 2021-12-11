@@ -4,7 +4,7 @@ exports[`renders correctly 1`] = `
 "<div class=\\"App\\">
   <div class=\\"menu\\">
     <div class=\\"container\\">
-      <h2>Heey header</h2>
+      <h2 data-testid=\\"header-text\\">Heey header</h2>
     </div>
   </div>
   <div class=\\"menu_pdls\\">
