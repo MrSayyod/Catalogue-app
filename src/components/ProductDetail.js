@@ -12,7 +12,6 @@ const ProductDetail = () => {
   const { title, image, price, category, description } = product;
   const { productId } = useParams();
   const dispatch = useDispatch();
-  console.log(product);
 
   const fetchProductDetail = async () => {
     const response = await axios
@@ -62,13 +61,6 @@ const ProductDetail = () => {
         </div>
       )}
     </div>
-
-    // <div className="menu_pddtl">
-    //   <div className="container_pddtl">
-
-    //     {/* <h2>Heey ProductDetail</h2> */}
-    //   </div>
-    // </div>
   );
 };
 
