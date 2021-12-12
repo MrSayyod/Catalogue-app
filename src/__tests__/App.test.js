@@ -1,12 +1,12 @@
-import React from "react";
-import App from "../App";
-import { act } from "react-dom/test-utils";
-import { render, unmountComponentAtNode } from "react-dom";
-import pretty from "pretty";
+import React from 'react';
+import { act } from 'react-dom/test-utils';
+import { render, unmountComponentAtNode } from 'react-dom';
+import pretty from 'pretty';
+import App from '../App';
 
 let container = null;
 beforeEach(() => {
-  container = document.createElement("div");
+  container = document.createElement('div');
   document.body.appendChild(container);
 });
 
@@ -16,7 +16,7 @@ afterEach(() => {
   container = null;
 });
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   act(() => {
     render(<App />, container);
   });

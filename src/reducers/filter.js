@@ -1,6 +1,6 @@
-import { ActionTypes } from "../containers/action-types";
+import ActionTypes from '../containers/action-types';
 
-const filterReducer = (state = "ALL", action) => {
+const filterReducer = (state = 'ALL', action) => {
   switch (action.type) {
     case ActionTypes.CHANGE_FILTER:
       return action.payload;

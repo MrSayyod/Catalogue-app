@@ -1,4 +1,4 @@
-import { ActionTypes } from "../containers/action-types";
+import ActionTypes from '../containers/action-types';
 
 const initialState = {
   products: [],

@@ -1,10 +1,10 @@
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
-import ProductListing from "./components/ProductListing";
-import ProductDetail from "./components/ProductDetail";
-import { Provider } from "react-redux";
-import store from "./store";
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Header from './components/Header';
+import ProductListing from './components/ProductListing';
+import ProductDetail from './components/ProductDetail';
+import store from './store';
 
 function App() {
   return (
