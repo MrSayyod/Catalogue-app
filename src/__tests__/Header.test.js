@@ -27,5 +27,5 @@ it('renders correctly', () => {
 
 it('should display the header text', () => {
   const { getByTestId } = render(<Header />);
-  expect(getByTestId('header-text')).toHaveTextContent('Heey header');
+  expect(getByTestId('header-text')).toHaveTextContent('Welcome to our store');
 });
