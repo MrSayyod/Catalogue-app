@@ -14,9 +14,7 @@ const ProductListing = () => {
   const fetchProducts = async () => {
     const response = await axios
       .get('https://fakestoreapi.com/products')
-      .catch(error => {
-        return error;
-      });
+      .catch(error => error);
     dispatch(setProducts(response.data));
   };
   useEffect(() => {

@@ -5,22 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import ProductListing from '../components/ProductListing';
 import store from '../store';
 
-
-// const defaultList = {
-//   title: 'Anime',
-//   image_url: null,
-// };
-
-// it('Should not return an image url', () => {
-//   const anime = defaultList;
-//   expect(anime.image_url).not.toEqual('#');
-// });
-
-// it('Should not return a null title', () => {
-//   const anime = defaultList;
-//   expect(anime.title).not.toEqual(null);
-// });
-
 it('Should return an array of anime list', () => {
   const getData = async () => {
     const response = await fetch('https://fakestoreapi.com/products');

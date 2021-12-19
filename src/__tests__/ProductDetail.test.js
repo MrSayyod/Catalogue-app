@@ -8,19 +8,19 @@ import store from '../store';
 const fakeProduct = [
   {
     id: 1,
-    title: "Bagpack",
-    price: "49$",
+    title: 'Bagpack',
+    price: '49$',
     image: null,
     category: "men's wear",
   },
 ];
 
-it("Should return aproduct title", () => {
+it('Should return aproduct title', () => {
   const product = fakeProduct[0];
-  expect(product.title).toEqual("Bagpack");
+  expect(product.title).toEqual('Bagpack');
 });
 
-it("Should not return a null title", () => {
+it('Should not return a null title', () => {
   const product = fakeProduct[0];
   expect(product.title).not.toEqual(null);
 });
