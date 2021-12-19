@@ -1,43 +1,46 @@
-// import React from "react";
-// import { act } from "react-dom/test-utils";
-// import ProductDetail from "../components/ProductDetail";
-// import { render, unmountComponentAtNode } from "react-dom";
-// import { Provider } from 'react-redux'
-// import store from '../store'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import ProductDetail from '../components/ProductDetail';
+import store from '../store';
 
-// let container = null;
-// beforeEach(() => {
-//   container = document.createElement("div");
-//   document.body.appendChild(container);
-// });
+const fakeProduct = [
+  {
+    id: 1,
+    title: "Bagpack",
+    price: "49$",
+    image: null,
+    category: "men's wear",
+  },
+];
 
-// afterEach(() => {
-//   unmountComponentAtNode(container);
-//   container.remove();
-//   container = null;
-// });
+it("Should return aproduct title", () => {
+  const product = fakeProduct[0];
+  expect(product.title).toEqual("Bagpack");
+});
 
-// it("renders product data", async() => {
-//   const fakeProduct = {
-//     id: 1,
-//     title: "Backpack",
-//     price: 59.99,
-//     description: "Perfect pack for everyday use ",
-//     category: "men's clothing",
-//   };
-//   jest.spyOn(global, "fetch").mockImplementation(() =>
-//     Promise.resolve({
-//       json: () => Promise.resolve(fakeProduct),
-//     })
-//   );
+it("Should not return a null title", () => {
+  const product = fakeProduct[0];
+  expect(product.title).not.toEqual(null);
+});
 
-//   await act(async () => {
-//     render(<Provider store={store}><ProductDetail id="1" /></Provider>, container);
-//   });
+it('Should return an array of products list', () => {
+  const getData = async () => {
+    const response = await fetch('https://fakestoreapi.com/products');
+    const myData = await response.json();
+    return myData.allProducts;
+  };
+  expect(getData()).not.toEqual(null);
+});
 
-//   expect(container.querySelector("h1").textContent).toBe(fakeProduct.title);
-//   expect(container.querySelector("h3").textContent).toBe(fakeProduct.category);
-//   expect(container.querySelector("p").description).toBe(fakeProduct.description);
-
-//   global.fetch.mockRestore();
-// });
+it('Expect to render ProductDetail component', () => {
+  const result = renderer.create(
+    <Provider store={store}>
+      <BrowserRouter>
+        <ProductDetail />
+      </BrowserRouter>
+    </Provider>,
+  ).toJSON;
+  expect(result).toMatchSnapshot();
+});
