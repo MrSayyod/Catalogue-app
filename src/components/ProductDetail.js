@@ -19,7 +19,7 @@ const ProductDetail = () => {
     const response = await axios
       .get(`https://fakestoreapi.com/products/${productId}`)
       .catch(error => {
-        console.log('Error', error);
+        return error;
       });
 
     dispatch(selectedProduct(response.data));
