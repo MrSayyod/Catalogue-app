@@ -1,0 +1,29 @@
+.product_image {
+  height: 35rem;
+}
+
+.col-3 {
+  margin: 1rem auto;
+}
+
+.card {
+  border: 1px double gray;
+  height: 44rem;
+}
+
+.content {
+  height: 8.5rem;
+}
+
+.product_header {
+  color: black;
+}
+
+.price {
+  color: blueviolet;
+}
+
+.category {
+  border: 1px solid gray;
+  background-color: rgba(236, 228, 228, 0.541);
+}
