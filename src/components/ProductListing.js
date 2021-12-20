@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import ProductComponent from './ProductComponent';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { setProducts, filterProduct } from '../actions/productActions';
 
 import { CategoryFilter } from './CategoryFilter';
@@ -42,7 +42,7 @@ const ProductListing = () => {
         />
       </div>
       <div className="container_pdls" />
-      <section>{content}</section>
+      <section className="row m-3">{content}</section>
     </div>
   );
 };
