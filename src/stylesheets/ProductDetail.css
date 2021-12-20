@@ -1,0 +1,18 @@
+.ui.grid.container {
+  margin: 2rem;
+};
+
+.lp,
+.rp {
+  padding: 2rem;
+}
+
+.rp > p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.brown.block.header {
+  width: 80%;
+  margin: 0 auto;
+}
