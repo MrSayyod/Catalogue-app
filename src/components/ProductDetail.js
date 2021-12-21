@@ -6,6 +6,7 @@ import {
   selectedProduct,
   removeSelectedProduct,
 } from '../actions/productActions';
+import '../stylesheets/ProductDetail.css';
 
 const ProductDetail = () => {
   const product = useSelector(state => state.product);
