@@ -8,6 +8,13 @@ A simple catalogue app that you can see and filter products.
 # Live demo
 [Demo app](https://catalogue-react-app.herokuapp.com)
 
+# Video description
+
+[Project demo](https://www.loom.com/share/b721d5af0a754397a4d36c36b054cfbf?sharedAppSource=personal_library)
+[Technical concepts 1](https://www.loom.com/share/113340238f4444d69e1be1d13c5522c6?sharedAppSource=personal_library)
+[Technical concepts 2](https://www.loom.com/share/814701683452425ab5f4fd57ae08aa6c?sharedAppSource=personal_library)
+[About React and Redux](https://www.loom.com/share/413bfc5af1d240178102a31680e75068?sharedAppSource=personal_library)
+
 ## Built with
 
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
