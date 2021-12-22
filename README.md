@@ -5,6 +5,9 @@
 # Catalogue-app
 A simple catalogue app that you can see and filter products.
 
+# Live demo
+[Demo app](https://catalogue-react-app.herokuapp.com)
+
 ## Built with
 
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
