@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![hire-badge](https://img.shields.io/badge/Consult%2FHire%20Sayyod-Contact%20with%20Sayyod-brightgreen)](mailto:ssayyod@gmail.com)[![Twitter Follow](https://img.shields.io/twitter/follow/sayyodsaidov?label=Follow%20Sayyod%20on%20Twitter&style=social)](https://twitter.com/sayyodsaidov)
 
-## Available Scripts
+# Catalogue-app
+A simple catalogue app that you can see and filter products.
 
-In the project directory, you can run:
+# Live demo
+[Demo app](https://catalogue-react-app.herokuapp.com)
 
-### `yarn start`
+# Video description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Project demo](https://www.loom.com/share/b721d5af0a754397a4d36c36b054cfbf?sharedAppSource=personal_library)
+[Technical concepts 1](https://www.loom.com/share/113340238f4444d69e1be1d13c5522c6?sharedAppSource=personal_library)
+[Technical concepts 2](https://www.loom.com/share/814701683452425ab5f4fd57ae08aa6c?sharedAppSource=personal_library)
+[About React and Redux](https://www.loom.com/share/413bfc5af1d240178102a31680e75068?sharedAppSource=personal_library)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Built with
 
-### `yarn test`
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [React](https://reactjs.org)
+* [Redux](https://redux.js.org)
+* [Webpack](https://webpack.js.org/)
+* [Eslint](https://eslint.org/)
+* [Babel](https://babeljs.io/)
+* [Github](https://github.com)
+* [Heroku](https://heroku.com)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Getting Started:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Download the zip file or clone from the git [here](https://github.com/MrSayyod/Catalogue-app)
+   **OR** 
+   Get this repo in your local machine by downloading this project or typing:
+`
+  git clone https://github.com/MrSayyod/Catalogue-app.git
+`
+Type `npm install`
+Type `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Browser (preferably: Google Chrome)
+  - Text editor (preferably: VSCode, Atom, Sublime)
+  - Command line
 
-### `yarn eject`
+## Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**To get this project set up on your local machine, follow these simple steps:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  1. Clone the project into your local machine using `git clone` command or download the zip file.
+  2. Go into the project directory using `cd directory name` command.
+  3. Run `npm install`.
+  4. Run `npm start`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Author
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :man_technologist: **Sayyod Saidov**
 
-## Learn More
+- Email: ssayyod@gmail.com
+- Github: [@MrSayyod](https://github.com/MrSayyod) 
+- LinkedIn:  [Sayyod Saidov](https://www.linkedin.com/in/sayyod-saidov-507b0818b)
+- Twitter: [Sayyod Saidov](https://twitter.com/sayyodsaidov)
+- Facebook: [Sayyod Saidov](https://www.facebook.com/sayyod)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:handshake: Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/MrSayyod/Catalogue-app/issues).
 
-### Code Splitting
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a :star2: if you like this project!
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.
+## Acknowledgements
+* [Microverse](https://www.microverse.org/)
+* [MDN Web docs](https://developer.mozilla.org/)
+* [React](https://reactjs.org)
+* [Redux](https://redux.js.org)
+* [Heroku](https://heroku.com)

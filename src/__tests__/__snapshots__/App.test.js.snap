@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+"<div class=\\"App\\">
+  <div class=\\"menu\\">
+    <div class=\\"container\\"><a href=\\"/\\">
+        <h2 data-testid=\\"header-text\\">Welcome to our store</h2>
+      </a></div>
+  </div>
+  <div class=\\"menu_pdls\\">
+    <div class=\\"category_filter\\"><select name=\\"category\\" class=\\"categoryDropdown\\">
+        <option value=\\"ALL\\">CATEGORIES</option>
+        <option valu=\\"men's clothing\\">men's clothing</option>
+        <option valu=\\"jewelery\\">jewelery</option>
+        <option valu=\\"electronics\\">electronics</option>
+        <option valu=\\"women's clothing\\">women's clothing</option>
+      </select></div>
+    <div class=\\"container_pdls\\"></div>
+    <section class=\\"row m-3\\"></section>
+  </div>
+</div>"
+`;
